@@ -9,6 +9,12 @@
 D:/VSCODE/CPP/Luo-Gu-practice/1-1/main.cpp
 iostream
 -
-stdio.h
+vector
+-
+algorithm
+-
+cmath
+-
+iomanip
 -
 
