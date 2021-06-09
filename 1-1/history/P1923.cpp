@@ -1,12 +1,12 @@
 #include<iostream>
-#include<cstdio>
+#include<stdio.h>
 
 using namespace std;
 
 
-void my_sort(int list[], int l, int r);
+void my_sort(int list[], int l, int r, int k);
 
-int a[1000000];
+int a[5000000];
 
 inline int read(){	//快读
 	char ch=getchar();
@@ -23,22 +23,17 @@ inline int read(){	//快读
 
 int main()
 {
-	int n;
-	cin >> n;
+	int n, k;
+	cin >> n >> k;
 	for (int i = 0; i < n; i++)
 	{
 		a[i] = read();
 	}
-	my_sort(a, 0, n - 1);
-	for (int i = 0; i < n-1; i++)
-	{
-		printf("%d ", a[i]);
-	}
-	printf("%d\n", a[n-1]);
+	my_sort(a, 0, n - 1, k);
 	return 0;
 }
 
-void my_sort(int list[], int l, int r)
+void my_sort(int list[], int l, int r, int k)
 {
 	if (l >= r)
 	{
@@ -63,6 +58,17 @@ void my_sort(int list[], int l, int r)
 		list[j] = x;
 		key = j;
 	}
-	my_sort(list, key + 1, r);
-	my_sort(list, l, key - 1);
+	if (key == k)
+	{
+		cout << list[k];
+		return;
+	}
+	else if (key < k)
+	{
+		my_sort(list, key + 1, r, k);
+	}
+	else
+	{
+		my_sort(list, l, key - 1, k);
+	}
 }

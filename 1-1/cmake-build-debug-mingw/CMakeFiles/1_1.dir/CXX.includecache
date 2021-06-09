@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/VS-CODE/CPP/luogu/1-1/P1177.h
+D:/VSCODE/CPP/Luo-Gu-practice/1-1/main.cpp
 iostream
 -
-cstdlib
+stdio.h
 -
-
-C:/VS-CODE/CPP/luogu/1-1/main.cpp
-P1177.h
-C:/VS-CODE/CPP/luogu/1-1/P1177.h
 
